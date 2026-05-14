@@ -1,0 +1,17 @@
+var myAtoi = function(s) {
+    let converted = parseInt(s)
+    
+    if (!Number.isInteger(converted)) {
+        return 0;
+    }
+
+    if (converted > Math.pow(2, 31) - 1) {
+        return Math.pow(2, 31) - 1;
+    }
+
+    if (converted < Math.pow(-2, 31)) {
+        return Math.pow(-2, 31);
+    }
+    
+    return converted;
+};
